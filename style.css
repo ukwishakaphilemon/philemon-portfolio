@@ -1,0 +1,348 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #0A192F; /* Dark professional background */
+    color: #CCD6F6;      /* Light text */
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+header {
+    background: #020c1b;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #64FFDA; /* Teal accent */
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links span a {
+    color: #CCD6F6;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-links span a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #64FFDA;
+    transition: 0.3s;
+}
+
+.nav-links span a:hover::after {
+    width: 100%;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+.page {
+    padding: 120px 10%;
+    text-align: center;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, #0f2027, #2c5364);
+    color: #FFFFFF;
+}
+
+.home h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.home p {
+    font-size: 1.2em;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #ee8301;
+    color: #0A192F;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: #52d6b6;
+}
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+#about p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+/* =========================================
+   SKILLS PAGE
+========================================= */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skills-container span {
+    background: #112240;
+    border: 1px solid #64FFDA;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.skills-container span:hover {
+    background: #64FFDA;
+    color: #0A192F;
+    cursor: default;
+}
+
+/* =========================================
+   PROJECTS PAGE
+========================================= */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #112240;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #64FFDA;
+}
+
+.project-card p {
+    margin: 10px 0 0 0;
+    line-height: 1.6;
+    color: #CCD6F6;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+#contact p, #contact a {
+    font-size: 1em;
+    margin: 8px 0;
+    color: #CCD6F6;
+}
+
+#contact a:hover {
+    color: #64FFDA;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: #020c1b;
+    color: #CCD6F6;
+    padding: 50px 0%;
+    margin-top: 100px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    color: #64FFDA;
+    margin-bottom: 0px;
+}
+
+.footer-section p,
+.footer-section a {
+    margin: 1px 0;
+    color: #CCD6F6;
+}
+
+.footer-section a:hover {
+    color: #64FFDA;
+}
+
+/* Footer bottom line */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #112240;
+    padding-top: 12px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+@media screen and (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container {
+        justify-content: center;
+    }
+    
+
+}
+/* SOCIAL ICONS UNDER CONTACT */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 50px;
+    color: #CCD6F6;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Individual brand colors on hover */
+.social-icons a:nth-child(1):hover { color: #E1306C; } /* Instagram */
+.social-icons a:nth-child(2):hover { color: #0077B5; } /* LinkedIn */
+.social-icons a:nth-child(3):hover { color: #000000; } /* X */
+.social-icons a:nth-child(4):hover { color: #000000; } /* TikTok */
+.social-icons a:nth-child(5):hover { color: #25D366; } /* WhatsApp */
+.social-icons a:nth-child(6):hover { color: #EA4335; } /* Email */
+/* PROFILE IMAGE */
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%; /* makes it circular */
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #64FFDA;
+}
+/* HERO IMPROVEMENT */
+.home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #0A192F, #112240);
+}
+
+/* HERO CONTENT */
+.hero-content {
+    max-width: 600px;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #64FFDA;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+}
+
+/* NAME */
+.home h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* TYPING TEXT */
+.typing {
+    color: #64FFDA;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.cursor {
+    color: #64FFDA;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}

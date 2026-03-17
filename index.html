@@ -1,0 +1,83 @@
+<header>
+    <nav>
+
+        <img src="images/profile.jpg" alt="Philemon" class="profile-img"><h1>Philemon UKWISHAKA</h1>
+
+        <div class="nav-links">
+            <span><a href="index.html"><b>Home</b></a></span>
+            <span><a href="about.html"><b>About</b></a></span>
+            <span><a href="skills.html"><b>Skills</b></a></span>
+            <span><a href="projects.html"><b>Projects</b></a></span>
+            <span><a href="contact.html"><b>Contact</b></a></span>
+        </div>
+    </nav>
+    
+</header>
+<link rel="stylesheet" href="style.css">
+
+<section class="home page">
+ <div class="hero-content">
+        <img src="images/profile.jpg" alt="Philemon" class="profile-img">
+
+        <h1>Philemon Ukwishaka</h1>
+
+        <p>
+            <span class="typing"></span>
+        </p>
+    </div>
+   <script>
+const texts = [
+    "IT Specialist",
+    "Cybersecurity Enthusiast",
+    "Web Developer",
+    "Virtual Assistant",
+    "Logo Designer"
+];
+
+let i = 0;          // word index
+let j = 0;          // letter index
+let currentText = "";
+let isDeleting = false;
+
+function typeEffect() {
+    currentText = texts[i];
+
+    if (!isDeleting) {
+        // Typing
+        document.querySelector(".typing").textContent = currentText.substring(0, j + 1);
+        j++;
+
+        if (j === currentText.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1200); // stay after full word
+            return;
+        }
+
+    } else {
+        // Deleting
+        document.querySelector(".typing").textContent = currentText.substring(0, j - 1);
+        j--;
+
+        if (j === 0) {
+            isDeleting = false;
+            i++;
+            if (i === texts.length) {
+                i = 0; // restart
+            }
+        }
+    }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
+}
+
+typeEffect();
+</script>
+</section>
+    <footer>
+
+    <div class="footer-bottom">
+        <h4>Contact us</h4>
+            <p>Email: ukwishakaphilemon@gmail.com | Phone: +250787816913 | Location: Kigali, Rwanda</p>
+            <p>© 2026 Philemon Ukwishaka | All Rights Reserved</p>
+    </div>
+    </footer>
